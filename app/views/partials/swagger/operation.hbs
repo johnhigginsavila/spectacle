@@ -61,7 +61,10 @@
     <div class="doc-copy">
       {{! The _request_body variable is filled with the parameter `body` by the preprocessor. }}
       {{#if _show_requst_body_section}}
-        {{>swagger/request-body consumes=consumes body=_request_body}}
+        {{>swagger/body consumes=consumes body=_request_body}}
+        {{!-- {{#with _request_body}}
+          {{>swagger/definition title=@key anchor="/definitions" }}
+        {{/with}} --}}
       {{/if}}
 
       {{>swagger/parameters parameters=parameters}}

@@ -36,6 +36,12 @@
               </div>
               <div class="prop-value">
                 {{md description}}
+                {{#if schema}}
+                  <div class="prop-row">
+                    {{>json-schema/body schema}}
+                  </div>
+                  <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href="{{$ref}}">{{$ref}}</a></span> -->
+                {{/if}}
               </div>
             </div>
             {{#if schema.type}}

@@ -158,7 +158,8 @@ module.exports = function (options) {
     //= Run the shiz
 
     if (opts.startServer) {
-        grunt.task.run('server')
+        // grunt.task.run('server')
+        grunt.task.run('develop')
     }
     else {
         if (!opts.disableCss) {
